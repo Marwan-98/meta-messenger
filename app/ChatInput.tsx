@@ -14,8 +14,6 @@ const ChatInput = ({ session }: Props) => {
   const [input, setInput] = useState("");
   const { data: messages, error, mutate } = useSWR("/api/getMessages", fetcher);
 
-  console.log(messages);
-
   const addMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
